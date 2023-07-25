@@ -1,4 +1,4 @@
-package com.example.surf_practice_chat_flutter
+package com.example.surf_flutter_study_jam_4
 
 import io.flutter.embedding.android.FlutterActivity
 

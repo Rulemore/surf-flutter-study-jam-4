@@ -1,25 +1,34 @@
 name: surf_practice_magic_ball
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: 3.0.3 # Dart SDK version
-  flutter: 3.10.3 # Flutter SDK version
+  sdk: 3.0.6 # Dart SDK version
+  flutter: 3.10.6 # Flutter SDK version
 
 dependencies:
+  cupertino_icons: ^1.0.2
+  dio: ^5.3.0
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.7
+  jovial_svg: ^1.1.16
+  provider: ^6.0.5
+  vector_graphics_compiler: ^1.1.7
 
 dev_dependencies:
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^2.0.1
 flutter:
-
   uses-material-design: true
+  assets:
+    - assets/ball.svg
+    - assets/error.svg
+    - assets/bg_text.svg
+    - assets/star.svg
+    - assets/small_star.svg
+    - assets/bg.svg
