@@ -47,7 +47,7 @@ class MagicBallScreen extends StatelessWidget {
                   ],
                 ),
                 BallWidget(),
-                // const SizedBox(height: 40),
+                const SizedBox(height: 40),
                 const Text(
                   'Нажмите на шар \n или потрясите телефон',
                   textAlign: TextAlign.center,
