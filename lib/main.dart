@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       home: ChangeNotifierProvider(
         create: (context) => BallModel(),
-        child: MagicBallScreen(),
+        child: const MagicBallScreen(),
       ),
     );
   }

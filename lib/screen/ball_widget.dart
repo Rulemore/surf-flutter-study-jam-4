@@ -22,11 +22,11 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1220),
+      duration: const Duration(milliseconds: 2900),
     )..repeat(reverse: true);
 
-    const double startingPosition = -80; // Вертикальное положение в начале анимации
-    const double endingPosition = 80; // Вертикальное положение в конце анимации
+    const double startingPosition = -70; // Вертикальное положение в начале анимации
+    const double endingPosition = 70; // Вертикальное положение в конце анимации
 
     _verticalAnimation = Tween<double>(
       begin: startingPosition,
@@ -93,7 +93,7 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
                       size: const Size(_ballSize, _ballSize),
                     ),
                     SizedBox(
-                      height: _ballSize - 30,
+                      height: _ballSize - 35,
                       width: _ballSize - 30,
                       child: Center(
                         child: Text(

@@ -15,8 +15,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.7
-  jovial_svg: ^1.1.16
   provider: ^6.0.5
+  translator: ^0.1.7
   vector_graphics_compiler: ^1.1.7
 
 dev_dependencies:
@@ -25,6 +25,7 @@ dev_dependencies:
     sdk: flutter
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/ball.svg
     - assets/error.svg

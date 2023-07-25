@@ -10,7 +10,8 @@ class Network {
       final response = await dio.get(url);
       return response.data["reading"];
     } catch (e) {
-      return e.toString();
+      return "Error";
+      // return e.toString();
     }
   }
 }

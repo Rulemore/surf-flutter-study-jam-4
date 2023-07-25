@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:surf_practice_magic_ball/network.dart';
+import 'package:translator/translator.dart';
 
 class BallModel extends ChangeNotifier {
   bool isLoading = false;
@@ -13,6 +14,13 @@ class BallModel extends ChangeNotifier {
     });
   }
 
+  void _translateText(String text) async {
+    final translator = GoogleTranslator();
+    translator.translate(text, from: 'en', to: 'ru').then((value) {
+      answer = value.toString();
+    });
+  }
+
   void getAnswer() async {
     answer = "";
     isLoading = true;
@@ -23,11 +31,10 @@ class BallModel extends ChangeNotifier {
       if (answer == "Error") {
         isError = true;
         isAnswered = false;
-
-        // answer = '';
       } else {
         isError = false;
         isAnswered = true;
+        _translateText(answer);
       }
     } catch (e) {
       isError = true;
