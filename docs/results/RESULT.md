@@ -1,10 +1,10 @@
-## Целевая платформа
+# Целевая платформа
 
 - Android
 
 ---
 
-## Результаты
+# Результаты
 
 - Запрос к серверу производится по нажатию на летающий шар
 - Ответ от сервера выводится на шар
@@ -16,17 +16,17 @@
 
 ---
 
-## Ссылки на демонстрацию работы/скриншоты
+# Ссылки на демонстрацию работы/скриншоты
 
 ---
-# [Скринкаст](https://youtube.com/shorts/p1tjdcUcnfk?feature=share)
+## [Скринкаст](https://youtube.com/shorts/p1tjdcUcnfk?feature=share)
 ---
 
 ```
 Начальное состояние шара
 ```
 
-## ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/20a86a3d-93bf-425a-bde4-b2e78b27f8fb)
+ ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/20a86a3d-93bf-425a-bde4-b2e78b27f8fb)
 
 ---
 
@@ -34,7 +34,7 @@
 Ожидание ответа
 ```
 
-## ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/a57b2fa2-e684-40ff-8bad-1ce6cc8e4f52)
+ ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/a57b2fa2-e684-40ff-8bad-1ce6cc8e4f52)
 
 ---
 
@@ -42,7 +42,7 @@
 Ответ
 ```
 
-## ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/4fdb9814-a749-42ed-b2cb-8b9cab2ad876)
+ ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/4fdb9814-a749-42ed-b2cb-8b9cab2ad876)
 
 ---
 
@@ -50,7 +50,7 @@
 Экран настроек
 ```
 
-## ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/ae503238-54fa-44f6-a595-39775895e663)
+ ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/ae503238-54fa-44f6-a595-39775895e663)
 
 ---
 
