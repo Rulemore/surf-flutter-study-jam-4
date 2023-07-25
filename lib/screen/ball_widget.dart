@@ -94,8 +94,8 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
                           ballModel.answer,
                           textAlign: TextAlign.center,
                           softWrap: true,
-                          style: const TextStyle(
-                            fontSize: 28,
+                          style: TextStyle(
+                            fontSize: (ballModel.ballSize / 10).toDouble(),
                             color: BallColors.textColor,
                             fontWeight: FontWeight.w600,
                           ),
