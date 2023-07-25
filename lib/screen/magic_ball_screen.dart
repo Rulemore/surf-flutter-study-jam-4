@@ -3,6 +3,7 @@ import 'package:surf_practice_magic_ball/screen/ball_widget.dart';
 import 'package:surf_practice_magic_ball/screen/settings_screen.dart';
 
 class MagicBallScreen extends StatelessWidget {
+  // экран с шаром
   const MagicBallScreen({Key? key}) : super(key: key);
 
   @override

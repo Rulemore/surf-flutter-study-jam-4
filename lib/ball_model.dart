@@ -3,6 +3,7 @@ import 'package:surf_practice_magic_ball/network.dart';
 import 'package:translator/translator.dart';
 
 class BallModel extends ChangeNotifier {
+  // модель шара и его костыли
   bool isLoading = false;
   bool isError = false;
   bool isAnswered = false;

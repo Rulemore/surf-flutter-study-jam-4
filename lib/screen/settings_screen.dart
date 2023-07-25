@@ -4,6 +4,7 @@ import 'package:surf_practice_magic_ball/ball_model.dart';
 import 'package:surf_practice_magic_ball/screen/magic_ball_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
+  // экран настроек
   const SettingsScreen({super.key});
 
   @override
@@ -21,7 +22,6 @@ class SettingsScreen extends StatelessWidget {
                     end: Alignment.topCenter,
                     colors: [Color(0xff000002), Color(0xff100C2C)]),
               ),
-              // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(

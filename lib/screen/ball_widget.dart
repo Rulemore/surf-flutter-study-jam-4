@@ -5,6 +5,7 @@ import 'package:surf_practice_magic_ball/ball_model.dart';
 import 'package:surf_practice_magic_ball/screen/colors.dart';
 
 class BallWidget extends StatefulWidget {
+  // это очень плохой шар
   const BallWidget({super.key});
 
   @override
@@ -114,6 +115,7 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
 }
 
 class EdgingPainter extends CustomPainter {
+  //рисовалка края шара
   @override
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
@@ -140,6 +142,7 @@ class EdgingPainter extends CustomPainter {
 }
 
 class BgPainter extends CustomPainter {
+  //рисовалка центра - фона шара
   final Color color;
   BgPainter({
     required this.color,

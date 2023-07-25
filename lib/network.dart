@@ -2,7 +2,8 @@ import 'package:dio/dio.dart';
 
 const String url = "https://eightballapi.com/api/";
 
-class Network {
+interface class Network {
+  // это сетевой интрефейс
   static final dio = Dio();
 
   static Future<String> getAnswer() async {
