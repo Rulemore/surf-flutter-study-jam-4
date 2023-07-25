@@ -19,10 +19,10 @@ Android
 # Ссылки на демонстрацию работы/скриншоты
 
 ```
-
+Начальное состояние шара
 ```
 
-## ![Начальное состояние шара](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/20a86a3d-93bf-425a-bde4-b2e78b27f8fb)
+## ![image](https://github.com/Rulemore/surf-flutter-study-jam-4/assets/94244200/20a86a3d-93bf-425a-bde4-b2e78b27f8fb)
 
 ```
 Ожидание ответа
