@@ -4,8 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:surf_practice_magic_ball/ball_model.dart';
 import 'package:surf_practice_magic_ball/screen/colors.dart';
 
-const double _ballSize = 280;
-
 class BallWidget extends StatefulWidget {
   const BallWidget({super.key});
 
@@ -20,17 +18,14 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
   @override
   void initState() {
     super.initState();
+    final ballModel = Provider.of<BallModel>(context, listen: false);
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2900),
+      duration: ballModel.animationDuration,
     )..repeat(reverse: true);
-
-    const double startingPosition = -70; // Вертикальное положение в начале анимации
-    const double endingPosition = 70; // Вертикальное положение в конце анимации
-
     _verticalAnimation = Tween<double>(
-      begin: startingPosition,
-      end: endingPosition,
+      begin: ballModel.startingPosition,
+      end: ballModel.endingPosition,
     ).animate(_controller);
   }
 
@@ -52,7 +47,6 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
     }
   }
 
-  // final ballModel = Provider.of<BallModel>(context, listen: false);
   @override
   Widget build(BuildContext context) {
     _controller.reset();
@@ -60,7 +54,7 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
       animation: _controller,
       builder: (context, child) {
         return Consumer<BallModel>(builder: (context, ballModel, child) {
-          if (ballModel.isLoading || ballModel.isError) {
+          if (ballModel.isLoading) {
             stopAnimation();
           } else {
             startAnimation();
@@ -78,7 +72,7 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
                   children: [
                     CustomPaint(
                       painter: EdgingPainter(),
-                      size: const Size(_ballSize, _ballSize),
+                      size: Size(ballModel.ballSize, ballModel.ballSize),
                     ),
                     CustomPaint(
                       painter: BgPainter(color: () {
@@ -90,11 +84,11 @@ class _BallWidgetState extends State<BallWidget> with SingleTickerProviderStateM
                           return BallColors.normalBgColor;
                         }
                       }()),
-                      size: const Size(_ballSize, _ballSize),
+                      size: Size(ballModel.ballSize, ballModel.ballSize),
                     ),
                     SizedBox(
-                      height: _ballSize - 35,
-                      width: _ballSize - 30,
+                      height: ballModel.ballSize - 35,
+                      width: ballModel.ballSize - 30,
                       child: Center(
                         child: Text(
                           ballModel.answer,

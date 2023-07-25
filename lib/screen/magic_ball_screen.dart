@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:surf_practice_magic_ball/screen/ball_widget.dart';
+import 'package:surf_practice_magic_ball/screen/settings_screen.dart';
 
 class MagicBallScreen extends StatelessWidget {
   const MagicBallScreen({Key? key}) : super(key: key);
@@ -21,16 +22,38 @@ class MagicBallScreen extends StatelessWidget {
             // ignore: prefer_const_constructors
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                SizedBox(height: 35),
+              children: [
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsScreen(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.settings,
+                        color: Color(0xFFFFFFFF),
+                        size: 40,
+                      ),
+                    ),
+                    const SizedBox(width: 8)
+                  ],
+                ),
                 BallWidget(),
-                SizedBox(height: 40),
-                Text(
+                const SizedBox(height: 40),
+                const Text(
                   'Нажмите на шар \n или потрясите телефон',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Color(0xff727272), fontSize: 20),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
               ],
             ),
           ),

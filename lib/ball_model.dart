@@ -8,6 +8,27 @@ class BallModel extends ChangeNotifier {
   bool isAnswered = false;
   String answer = "";
 
+  Duration animationDuration = Duration(milliseconds: 2900);
+  double startingPosition = -60; // Вертикальное положение в начале анимации
+  double endingPosition = 60; // Вертикальное положение в конце анимации
+  double ballSize = 280;
+
+  void setPositions(int value) {
+    startingPosition = -value.toDouble();
+    endingPosition = value.toDouble();
+    notifyListeners();
+  }
+
+  void setDuration(int value) {
+    animationDuration = Duration(milliseconds: value);
+    notifyListeners();
+  }
+
+  void setBallSize(int value) {
+    ballSize = value.toDouble();
+    notifyListeners();
+  }
+
   void delayExecution() {
     Future.delayed(const Duration(seconds: 3), () {
       notifyListeners();
