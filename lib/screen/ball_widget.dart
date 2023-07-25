@@ -123,6 +123,15 @@ class EdgingPainter extends CustomPainter {
       ..color = BallColors.edgingColor
       ..style = PaintingStyle.fill;
 
+    final shadowHeight = size.height / 10;
+
+    final shadowPaint = Paint()
+      ..color = Colors.grey.withOpacity(0.3)
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, shadowHeight / 2) // Рассчитываем радиус размытия тени
+      ..style = PaintingStyle.fill;
+
+    canvas.drawCircle(center + Offset(0, shadowHeight / 2), radius, shadowPaint);
+
     canvas.drawCircle(center, radius, paint);
   }
 
