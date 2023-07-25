@@ -19,10 +19,7 @@
 # Ссылки на демонстрацию работы/скриншоты
 
 ---
-Скринкаст 
-```
-https://youtube.com/shorts/p1tjdcUcnfk?feature=share
-```
+# [Скринкаст](https://youtube.com/shorts/p1tjdcUcnfk?feature=share)
 ---
 
 ```
